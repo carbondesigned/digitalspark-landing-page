@@ -16,7 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang='en'>
       <head>
-        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <link rel='icon' href='/favicon.ico' />
       </head>
       <body className={inter.className}>
         <nav className='navbar bg-black/50 backdrop-blur-2xl md:px-24 border-b-[0.5px] border-white/25 fixed top-0 w-full z-50'>
