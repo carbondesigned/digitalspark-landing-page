@@ -4,7 +4,7 @@ export default function Home() {
   const bgGlow =
     "before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#5b00ef] after:dark:opacity-40 before:lg:h-[360px]";
   return (
-    <main className='flex min-h-screen flex-col justify-between p-24 max-w-5xl mx-auto'>
+    <main className='flex min-h-screen flex-col p-24 max-w-5xl mx-auto'>
       <section className='flex flex-col-reverse lg:flex-row min-h-[45vh] w-full'>
         <div className='flex flex-[0.25] lg:flex-1 flex-col gap-4'>
           <div className={`relative flex place-items-center ${bgGlow}`}>
@@ -25,7 +25,7 @@ export default function Home() {
             </a>
             <a
               href='#'
-              className='px-6 py-4 border-[0.5px] border-white text-white rounded-full font-medium'
+              className='px-6 py-4 border-[0.5px] border-white text-white rounded-full font-medium hover:bg-white hover:text-black duration-200 ease-in-out'
             >
               Who are we
             </a>
@@ -62,10 +62,11 @@ export default function Home() {
               </p>
             </div>
             <a
-              href='#'
+              href='https://dylanreed.dev'
+              target='_blank'
               className='px-6 py-4 max-w-fit bg-white text-black rounded-full font-medium'
             >
-              See our work
+              See more
             </a>
           </div>
         </div>

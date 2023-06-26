@@ -1,3 +1,4 @@
+import DropdownMenu from '@/components/DropdownMenu';
 import './globals.css';
 import {Poppins} from 'next/font/google';
 
@@ -14,7 +15,37 @@ export const metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+      </head>
+      <body className={inter.className}>
+        <nav className='navbar bg-black/50 backdrop-blur-2xl px-24 border-b-[0.5px] border-white/25 fixed top-0 w-full z-50'>
+          <div className='navbar-start'>
+            <a className='btn btn-ghost normal-case text-xl' href='/'>
+              DigitalSpark
+            </a>
+          </div>
+
+          <div className='navbar-end'>
+            <ul className='flex items-center gap-2'>
+              <li className='text-sm text-white/75 hover:text-white duration-100'>
+                <a href='#'>Home</a>
+              </li>
+              <li className='text-sm text-white/75 hover:text-white duration-100'>
+                <a href='#'>About</a>
+              </li>
+              <li className='text-sm text-white/75 hover:text-white duration-100'>
+                <a href='#'>Services</a>
+              </li>
+              <li className='bg-white text-black rounded-full px-6 py-2 font-medium ml-6'>
+                <a href='/contact'>Contact</a>
+              </li>
+            </ul>
+            <DropdownMenu />
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
