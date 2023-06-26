@@ -19,7 +19,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
       <body className={inter.className}>
-        <nav className='navbar bg-black/50 backdrop-blur-2xl px-24 border-b-[0.5px] border-white/25 fixed top-0 w-full z-50'>
+        <nav className='navbar bg-black/50 backdrop-blur-2xl md:px-24 border-b-[0.5px] border-white/25 fixed top-0 w-full z-50'>
           <div className='navbar-start'>
             <a className='btn btn-ghost normal-case text-xl' href='/'>
               DigitalSpark
