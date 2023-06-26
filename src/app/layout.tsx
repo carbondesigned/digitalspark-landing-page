@@ -27,7 +27,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </div>
 
           <div className='navbar-end'>
-            <ul className='flex items-center gap-2'>
+            <ul className='hidden md:flex items-center gap-2'>
               <li className='text-sm text-white/75 hover:text-white duration-100'>
                 <a href='#'>Home</a>
               </li>
