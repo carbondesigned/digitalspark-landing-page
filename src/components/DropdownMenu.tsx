@@ -31,7 +31,9 @@ export default function DropdownMenu() {
           <a>About</a>
         </li>
         <li className='bg-white text-black rounded-lg mt-4 py-2'>
-          <a className='font-medium'>Contact</a>
+          <a className='font-medium' href='/contact'>
+            Contact
+          </a>
         </li>
       </ul>
     </div>

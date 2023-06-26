@@ -19,13 +19,13 @@ export default function Home() {
           <div className='flex gap-2 items-center'>
             <a
               href='#'
-              className='px-6 py-4 bg-white text-black rounded-full font-medium'
+              className='px-6 py-4 bg-white text-black rounded-full font-medium text-sm md:text-base'
             >
               See our work
             </a>
             <a
               href='#'
-              className='px-6 py-4 border-[0.5px] border-white text-white rounded-full font-medium hover:bg-white hover:text-black duration-200 ease-in-out'
+              className='px-6 py-4 border-[0.5px] border-white text-white rounded-full font-medium hover:bg-white hover:text-black duration-200 ease-in-out text-sm md:text-base'
             >
               Who are we
             </a>
