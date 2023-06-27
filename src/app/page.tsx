@@ -1,3 +1,4 @@
+import PricingListItem from '@/components/PricingListItem';
 import Image from 'next/image';
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='mt-24'>
+      <section className='my-24'>
         <h2 className='font-bold text-white/50 text-3xl py-4'>Who are we.</h2>
         <div className='flex flex-col md:flex-row gap-4'>
           <div className='relative w-full md:flex-[0.75] h-48 rounded-2xl overflow-hidden'>
@@ -95,6 +96,130 @@ export default function Home() {
             >
               See our work
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className='font-bold text-white/50 text-3xl py-4'>
+          Ready to start?
+        </h2>
+
+        <div className='w-full flex flex-col gap-1 rounded-3xl overflow-hidden text-black'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-1 flex-1'>
+            <div className='bg-white p-6 flex flex-col justify-between'>
+              <div className='py-8'>
+                <h3 className='font-bold text-2xl'>Design</h3>
+                <p className='text-black/75'>
+                  I’ll design websites, mobile apps, wireframes, design systems.
+                </p>
+              </div>
+              <h4 className='text-4xl font-bold py-8'>$529</h4>
+
+              <div className='pt-8'>
+                <div>
+                  <h5 className='font-bold'>What&apos;s included:</h5>
+                  <ul className='px-4'>
+                    <PricingListItem>Websites</PricingListItem>
+                    <PricingListItem>Mobile apps</PricingListItem>
+                    <PricingListItem>Wireframes</PricingListItem>
+                    <PricingListItem>Design systems</PricingListItem>
+                    <PricingListItem>Social media graphics</PricingListItem>
+                  </ul>
+                </div>
+                <div className='flex flex-col items-center gap-2 mt-12'>
+                  <a
+                    href='#'
+                    className='btn btn-secondary bg-black text-white w-full'
+                  >
+                    Get started
+                  </a>
+                  <a href='#'>Book a call</a>
+                </div>
+              </div>
+            </div>
+            <div className='bg-white p-6 flex flex-col justify-between'>
+              <div className='py-8'>
+                <h3 className='font-bold text-2xl'>
+                  Custom Web Development + Design
+                </h3>
+                <p className='text-black/75'>
+                  I’ll code a fully custom, highly performant, and SEO website
+                  for your business.
+                </p>
+              </div>
+              <h4 className='text-4xl font-bold py-8'>$1,299</h4>
+
+              <div className='pt-8'>
+                <div>
+                  <h5 className='font-bold'>What&apos;s included:</h5>
+                  <ul className='px-4'>
+                    <PricingListItem>Landing pages</PricingListItem>
+                    <PricingListItem>Resutrant/menu info</PricingListItem>
+                  </ul>
+                </div>
+                <div className='flex flex-col items-center gap-2 mt-12'>
+                  <a
+                    href='#'
+                    className='btn btn-secondary bg-black text-white w-full'
+                  >
+                    Get started
+                  </a>
+                  <a href='#'>Book a call</a>
+                </div>
+              </div>
+            </div>
+            <div className='bg-white p-6 flex flex-col justify-between'>
+              <div className='py-8'>
+                <h3 className='font-bold text-2xl'>Adcanced Web Development</h3>
+                <p className='text-black/75'>
+                  I’ll code and provide a fully customizable backend and
+                  dashboard to help your business.
+                </p>
+              </div>
+              <h4 className='text-4xl font-bold py-8'>$3,799</h4>
+
+              <div className='pt-8'>
+                <div>
+                  <h5 className='font-bold'>What&apos;s included:</h5>
+                  <ul className='px-4'>
+                    <PricingListItem>Fullstack web app</PricingListItem>
+                    <PricingListItem>Custom business dasboard</PricingListItem>
+                  </ul>
+                </div>
+                <div className='flex flex-col items-center gap-2 mt-12'>
+                  <a
+                    href='#'
+                    className='btn btn-secondary bg-black text-white w-full'
+                  >
+                    Get started
+                  </a>
+                  <a href='#'>Book a call</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='flex-[0.5] p-6 bg-white flex flex-col md:flex-row items-center'>
+            <div className='h-64 w-64 md:flex-1 relative'>
+              <Image
+                src='/images/pricing-book-call-ill.svg'
+                alt='Pricing book call illustration'
+                fill
+                className='object-contain h-full w-full'
+              />
+            </div>
+            <div className='md:flex-1 px-8'>
+              <h3 className='font-bold text-2xl'>Book a call</h3>
+              <p className='text-black/75'>
+                Learn more about how we can help you and your business.
+              </p>
+              <a
+                href='#'
+                className='btn btn-secondary bg-black text-white w-full'
+              >
+                Book a call
+              </a>
+            </div>
           </div>
         </div>
       </section>
