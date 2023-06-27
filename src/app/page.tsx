@@ -1,7 +1,7 @@
 import PricingListItem from '@/components/PricingListItem';
 import Image from 'next/image';
 
-export function SkillTag({children}: {children: React.ReactNode}) {
+function SkillTag({children}: {children: React.ReactNode}) {
   return (
     <p className='bg-secondary w-fit whitespace-nowrap px-6 py-2 text-xs border-[0.5px] border-white/10 rounded-full z-0 hover:brightness-150 duration-200 cursor-default'>
       {children}
