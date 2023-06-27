@@ -105,9 +105,9 @@ export default function Home() {
           Ready to start?
         </h2>
 
-        <div className='w-full flex flex-col gap-1 rounded-3xl overflow-hidden text-black'>
+        <div className='w-full flex flex-col gap-1 text-black'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-1 flex-1'>
-            <div className='bg-white p-6 flex flex-col justify-between'>
+            <div className='bg-white p-6 flex flex-col justify-between rounded-tl-3xl'>
               <div className='py-8'>
                 <h3 className='font-bold text-2xl'>Design</h3>
                 <p className='text-black/75'>
@@ -138,7 +138,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='bg-white p-6 flex flex-col justify-between'>
+            <div className='bg-white p-6 flex flex-col justify-between relative'>
+              <div className='absolute bg-white rounded-full h-32 w-32 grid place-items-center -top-12 md:-top-20 -right-6 shadow-real border-2 border-black border-dashed rotate-12'>
+                <h3 className='font-bold text-2xl text-center leading-5'>
+                  Most Popular
+                </h3>
+              </div>
               <div className='py-8'>
                 <h3 className='font-bold text-2xl'>
                   Custom Web Development + Design
@@ -169,7 +174,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='bg-white p-6 flex flex-col justify-between'>
+            <div className='bg-white p-6 flex flex-col justify-between rounded-tr-3xl'>
               <div className='py-8'>
                 <h3 className='font-bold text-2xl'>Adcanced Web Development</h3>
                 <p className='text-black/75'>
@@ -199,7 +204,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='flex-[0.5] p-6 bg-white flex flex-col md:flex-row items-center'>
+          <div className='flex-[0.5] p-6 bg-white flex flex-col md:flex-row items-center rounded-b-3xl'>
             <div className='h-64 w-64 md:flex-1 relative'>
               <Image
                 src='/images/pricing-book-call-ill.svg'
