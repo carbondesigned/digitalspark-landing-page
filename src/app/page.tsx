@@ -242,7 +242,8 @@ export default function Home() {
                 </div>
                 <div className='flex flex-col items-center gap-2 mt-12'>
                   <a
-                    href='#'
+                    href='https://buy.stripe.com/8wM00c1n50KZ5KUfYY'
+                    target='_blank'
                     className='btn btn-secondary bg-black text-white w-full'
                   >
                     Get started
@@ -266,7 +267,7 @@ export default function Home() {
                   for your business.
                 </p>
               </div>
-              <h4 className='text-4xl font-bold py-8'>$1,299</h4>
+              <h4 className='text-4xl font-bold py-8'>$3,549</h4>
 
               <div className='pt-8'>
                 <div>
@@ -278,7 +279,7 @@ export default function Home() {
                 </div>
                 <div className='flex flex-col items-center gap-2 mt-12'>
                   <a
-                    href='#'
+                    href='https://buy.stripe.com/aEUeV65Dl8drehqcMN'
                     className='btn btn-secondary bg-black text-white w-full'
                   >
                     Get started
@@ -295,7 +296,7 @@ export default function Home() {
                   dashboard to help your business.
                 </p>
               </div>
-              <h4 className='text-4xl font-bold py-8'>$3,799</h4>
+              <h4 className='text-4xl font-bold py-8'>$7,500</h4>
 
               <div className='pt-8'>
                 <div>
@@ -307,7 +308,7 @@ export default function Home() {
                 </div>
                 <div className='flex flex-col items-center gap-2 mt-12'>
                   <a
-                    href='#'
+                    href='https://buy.stripe.com/3cs8wI5Dl51f5KU7su'
                     className='btn btn-secondary bg-black text-white w-full'
                   >
                     Get started
