@@ -12,6 +12,40 @@ function SkillTag({children}: {children: React.ReactNode}) {
 export default function Home() {
   const bgGlow =
     "before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#5b00ef] after:dark:opacity-40 before:lg:h-[360px]";
+
+  const tagsRow1 = [
+    'Mobile App Development',
+    'JavaScript',
+    'React',
+    'Angular',
+    'Vue',
+    'Node.js',
+    'Python',
+    'Email Marketing',
+    'Copywriting',
+    'Data Analysis',
+    'Animation',
+    '3D Modeling',
+  ];
+
+  const tagsRow2 = [
+    'UI/UX',
+    'Web Design',
+    'Web Development',
+    'SEO',
+    'Digital Marketing',
+    'Branding',
+    'Social Media Marketing',
+    'Content Creation',
+    'Graphic Design',
+    'Information Architecture',
+    'Project Management',
+    'Customer Support',
+    'Quality Assurance',
+    'Video Editing',
+    'Illustration',
+    'Photography',
+  ];
   return (
     <main className='flex min-h-screen flex-col p-12 pt-24 md:p-24 max-w-5xl mx-auto'>
       <section
@@ -55,40 +89,18 @@ export default function Home() {
         </div>
       </section>
       <div className='hidden lg:flex flex-col gap-2 my-4 relative'>
-        <div className='absolute -left-[100%] top-0 w-full h-full bg-gradient-to-r from-black to-transparent z-20' />
-        <div className='absolute -right-[100%] top-0 w-full h-full bg-gradient-to-l from-black to-transparent z-20' />
-        <div className='flex gap-2 w-full z-0 animate-scroll-alternate'>
-          <SkillTag>UI/UX</SkillTag>
-          <SkillTag>Web Design</SkillTag>
-          <SkillTag>Web Development</SkillTag>
-          <SkillTag>SEO</SkillTag>
-          <SkillTag>Digital Marketing</SkillTag>
-          <SkillTag>Branding</SkillTag>
-          <SkillTag>Social Media Marketing</SkillTag>
-          <SkillTag>Content Creation</SkillTag>
-          <SkillTag>Graphic Design</SkillTag>
-          <SkillTag>Information Architecture</SkillTag>
-          <SkillTag>Project Management</SkillTag>
-          <SkillTag>Customer Support</SkillTag>
-          <SkillTag>Quality Assurance</SkillTag>
-          <SkillTag>Video Editing</SkillTag>
-          <SkillTag>Illustration</SkillTag>
-          <SkillTag>Photography</SkillTag>
-        </div>
-        <div className='flex gap-2 w-full z-0 animate-scroll-alternate-fast'>
-          <SkillTag>Mobile App Development</SkillTag>
-          <SkillTag>JavaScript</SkillTag>
-          <SkillTag>React</SkillTag>
-          <SkillTag>Angular</SkillTag>
-          <SkillTag>Vue</SkillTag>
-          <SkillTag>Node.js</SkillTag>
-          <SkillTag>Python</SkillTag>
-          <SkillTag>Email Marketing</SkillTag>
-          <SkillTag>Copywriting</SkillTag>
-          <SkillTag>Data Analysis</SkillTag>
-          <SkillTag>Animation</SkillTag>
-          <SkillTag>3D Modeling</SkillTag>
-        </div>
+        {[tagsRow1, tagsRow2].map((tags, rowIndex) => (
+          <div className='flex w-full overflow-hidden z-0' key={rowIndex}>
+            <div className='flex animate-scroll space-x-2'>
+              {tags.map((tag, index) => (
+                <SkillTag key={index}>{tag}</SkillTag>
+              ))}
+              {tags.map((tag, index) => (
+                <SkillTag key={`duplicate-${index}`}>{tag}</SkillTag>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
       <section className='my-12' id='aboutus'>
         <h2 className='font-bold text-white/50 text-3xl py-4'>Who are we.</h2>
@@ -122,29 +134,21 @@ export default function Home() {
         <div className='flex flex-col md:flex-row-reverse gap-4 mt-24'>
           <div className='relative w-full md:flex-[0.75] h-48 rounded-2xl overflow-hidden'>
             <Image
-              src='/images/dylan.jpg'
+              src='/images/kemar.png'
               alt='Dylan Reed'
               fill
-              className='object-cover h-full w-full'
+              className='object-cover h-full w-full object-top'
             />
           </div>
           <div className='flex-1 flex flex-col gap-4'>
             <div className='flex flex-col gap-2'>
-              <h4 className='text-2xl font-medium'>
-                👋 How&apos;s going, I’m Kemar!
-              </h4>
+              <h4 className='text-2xl font-medium'>👋 I’m Kemar!</h4>
               <p className='text-white/50'>
                 I&apos;m currently a student at St. Clair College studying Web
                 Development & Internet Applications, figuring to use my skills
                 to help local businesses grow their digital presence!
               </p>
             </div>
-            <a
-              href='#'
-              className='px-6 py-4 max-w-fit bg-white text-black rounded-full font-medium'
-            >
-              See our work
-            </a>
           </div>
         </div>
       </section>
