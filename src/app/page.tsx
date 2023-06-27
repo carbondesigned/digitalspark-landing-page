@@ -1,13 +1,24 @@
 import PricingListItem from '@/components/PricingListItem';
 import Image from 'next/image';
 
+export function SkillTag({children}: {children: React.ReactNode}) {
+  return (
+    <p className='bg-secondary w-fit whitespace-nowrap px-6 py-2 text-xs border-[0.5px] border-white/10 rounded-full z-0 hover:brightness-150 duration-200 cursor-default'>
+      {children}
+    </p>
+  );
+}
+
 export default function Home() {
   const bgGlow =
     "before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#5b00ef] after:dark:opacity-40 before:lg:h-[360px]";
   return (
     <main className='flex min-h-screen flex-col p-12 pt-24 md:p-24 max-w-5xl mx-auto'>
-      <section className='flex flex-col-reverse lg:flex-row min-h-[45vh] w-full'>
-        <div className='flex flex-[0.25] lg:flex-1 flex-col gap-4'>
+      <section
+        className='flex flex-col-reverse lg:flex-row min-h-[45vh] w-full'
+        id='hero'
+      >
+        <div className='flex flex-[0.25] lg:flex-1 flex-col gap-4 relative'>
           <div className={`relative flex place-items-center ${bgGlow}`}>
             <h1 className='text-6xl font-bold'>
               No more ‘Meh’ Websites. Let us help.
@@ -19,13 +30,13 @@ export default function Home() {
           </h4>
           <div className='flex gap-2 items-center'>
             <a
-              href='#'
+              href='#pricing'
               className='px-6 py-4 bg-white text-black rounded-full font-medium text-sm md:text-base'
             >
-              See our work
+              Let&apos;s start
             </a>
             <a
-              href='#'
+              href='#aboutus'
               className='px-6 py-4 border-[0.5px] border-white text-white rounded-full font-medium hover:bg-white hover:text-black duration-200 ease-in-out text-sm md:text-base'
             >
               Who are we
@@ -33,7 +44,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`hidden relative md:flex flex-[4] lg:flex-1 rounded-2xl overflow-hidden lg:overflow-visible ${bgGlow}`}
+          className={`hidden relative md:flex flex-[4] lg:flex-1 rounded-2xl overflow-hidden lg:overflow-visible hover:brightness-125 hover:saturate-150 duration-200 ${bgGlow}`}
         >
           <Image
             src='/images/cool-bg02.png'
@@ -43,7 +54,43 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='my-24'>
+      <div className='hidden lg:flex flex-col gap-2 my-4 relative'>
+        <div className='absolute -left-[100%] top-0 w-full h-full bg-gradient-to-r from-black to-transparent z-20' />
+        <div className='absolute -right-[100%] top-0 w-full h-full bg-gradient-to-l from-black to-transparent z-20' />
+        <div className='flex gap-2 w-full z-0 animate-scroll-alternate'>
+          <SkillTag>UI/UX</SkillTag>
+          <SkillTag>Web Design</SkillTag>
+          <SkillTag>Web Development</SkillTag>
+          <SkillTag>SEO</SkillTag>
+          <SkillTag>Digital Marketing</SkillTag>
+          <SkillTag>Branding</SkillTag>
+          <SkillTag>Social Media Marketing</SkillTag>
+          <SkillTag>Content Creation</SkillTag>
+          <SkillTag>Graphic Design</SkillTag>
+          <SkillTag>Information Architecture</SkillTag>
+          <SkillTag>Project Management</SkillTag>
+          <SkillTag>Customer Support</SkillTag>
+          <SkillTag>Quality Assurance</SkillTag>
+          <SkillTag>Video Editing</SkillTag>
+          <SkillTag>Illustration</SkillTag>
+          <SkillTag>Photography</SkillTag>
+        </div>
+        <div className='flex gap-2 w-full z-0 animate-scroll-alternate-fast'>
+          <SkillTag>Mobile App Development</SkillTag>
+          <SkillTag>JavaScript</SkillTag>
+          <SkillTag>React</SkillTag>
+          <SkillTag>Angular</SkillTag>
+          <SkillTag>Vue</SkillTag>
+          <SkillTag>Node.js</SkillTag>
+          <SkillTag>Python</SkillTag>
+          <SkillTag>Email Marketing</SkillTag>
+          <SkillTag>Copywriting</SkillTag>
+          <SkillTag>Data Analysis</SkillTag>
+          <SkillTag>Animation</SkillTag>
+          <SkillTag>3D Modeling</SkillTag>
+        </div>
+      </div>
+      <section className='my-12' id='aboutus'>
         <h2 className='font-bold text-white/50 text-3xl py-4'>Who are we.</h2>
         <div className='flex flex-col md:flex-row gap-4'>
           <div className='relative w-full md:flex-[0.75] h-48 rounded-2xl overflow-hidden'>
@@ -58,8 +105,9 @@ export default function Home() {
             <div className='flex flex-col gap-2'>
               <h4 className='text-2xl font-medium'>👋 Hey, I’m Dylan!</h4>
               <p className='text-white/50'>
-                I’m a software engineer passionate about helping local
-                businesses grow their digital presence!
+                I’m a software engineer, originally wanted to work in big tech,
+                but now I love helping small local businesses grow their digital
+                from growing up in Windsor Ontario.
               </p>
             </div>
             <a
@@ -67,7 +115,7 @@ export default function Home() {
               target='_blank'
               className='px-6 py-4 max-w-fit bg-white text-black rounded-full font-medium'
             >
-              See more
+              Learn more about me
             </a>
           </div>
         </div>
@@ -86,8 +134,9 @@ export default function Home() {
                 👋 How&apos;s going, I’m Kemar!
               </h4>
               <p className='text-white/50'>
-                I love helping small local businesses grow their digital from
-                growing up in Windsor Ontario.
+                I&apos;m currently a student at St. Clair College studying Web
+                Development & Internet Applications, figuring to use my skills
+                to help local businesses grow their digital presence!
               </p>
             </div>
             <a
@@ -100,14 +149,78 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className='mb-20' id='ourwork'>
+        <h2 className='font-bold text-white/50 text-3xl py-4'>
+          Some of our work
+        </h2>
+        <div className='carousel carousel-center w-full p-4 space-x-4 rounded-box'>
+          <div className='carousel-item relative md:w-96 md:h-96'>
+            <Image
+              src='/images/nathan-zarowny-mock.png'
+              className='rounded-box'
+              alt='Nathan Zarowny Website Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/city-cyclery-mock.png'
+              className='rounded-box'
+              alt='City Cyclery Website Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/gymlink-mock.png'
+              className='rounded-box'
+              alt='Gymlink App Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/my-portfolio-mock.png'
+              className='rounded-box'
+              alt='My Portfolio Website Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/solana-dapp.png'
+              className='rounded-box object-cover'
+              alt='Solana Dapp Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/run-mock.png'
+              className='rounded-box'
+              alt='Runing Shoe Website Mockup'
+              fill
+            />
+          </div>
+          <div className='carousel-item relative w-64 h-64 md:w-96 md:h-96'>
+            <Image
+              src='/images/cricket-mock.png'
+              className='rounded-box'
+              alt='Cricket Website Mockup'
+              fill
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id='pricing'>
         <h2 className='font-bold text-white/50 text-3xl py-4'>
           Ready to start?
         </h2>
 
         <div className='w-full flex flex-col gap-1 text-black'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-1 flex-1'>
-            <div className='bg-white p-6 flex flex-col justify-between rounded-tl-3xl'>
+            <div className='bg-white p-6 flex flex-col justify-between rounded-t-3xl md:rounded-tr-none'>
               <div className='py-8'>
                 <h3 className='font-bold text-2xl'>Design</h3>
                 <p className='text-black/75'>
@@ -174,7 +287,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='bg-white p-6 flex flex-col justify-between rounded-tr-3xl'>
+            <div className='bg-white p-6 flex flex-col justify-between md:rounded-tr-3xl'>
               <div className='py-8'>
                 <h3 className='font-bold text-2xl'>Adcanced Web Development</h3>
                 <p className='text-black/75'>

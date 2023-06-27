@@ -22,13 +22,13 @@ export default function DropdownMenu() {
         className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-black border-[0.5px] border-white/25'
       >
         <li>
-          <a>Home</a>
+          <a href='#aboutus'>About us</a>
         </li>
         <li>
-          <a>Services</a>
+          <a href='#ourwork'>Our work</a>
         </li>
         <li>
-          <a>About</a>
+          <a href='#pricing'>Pricing</a>
         </li>
         <li className='bg-white text-black rounded-lg mt-4 py-2'>
           <a className='font-medium' href='/contact'>
