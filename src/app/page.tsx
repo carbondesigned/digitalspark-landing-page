@@ -294,7 +294,7 @@ export default function Home() {
             </div>
             <div className='bg-white p-6 flex flex-col justify-between md:rounded-tr-3xl'>
               <div className='py-8'>
-                <h3 className='font-bold text-2xl'>Adcanced Web Development</h3>
+                <h3 className='font-bold text-2xl'>Advanced Web Development</h3>
                 <p className='text-black/75'>
                   I’ll code and provide a fully customizable backend and
                   dashboard to help your business.
